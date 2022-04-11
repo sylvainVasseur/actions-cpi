@@ -4,7 +4,5 @@ jobs:
   MonPremierJob:
     runs-on: ubuntu-latest
     steps: 
-      - name: Afficher salut en console
-        run: echo "Salut!"
-      - name: Etape deux
-        run: echo "Toto"
+      - name: afficher le contenu de mon job
+        run: ls
