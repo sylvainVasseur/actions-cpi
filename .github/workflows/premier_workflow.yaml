@@ -1,13 +1,8 @@
 name: Toto
-on: 
-  pull_request:
-    branches:
-      - "main"
-    types:
-      - "closed"
+on: [push]
 jobs:
   Test:
     runs-on: ubuntu-latest
     steps: 
-      - name: Test 1
-        run: echo "Salut"
+      - uses: ThomasT-semifir/actions-hello-cpi@1.0.0
+
