@@ -9,4 +9,5 @@ jobs:
   Tata:
     runs-on: ubuntu-latest
     steps:
-      - echo "yaaaa"
+      - name: blabla
+        run: echo 'yaaaa'
