@@ -1,7 +1,7 @@
 name: deuxieme
 on:
   workflow_run:
-    workflows
+    workflows:
       - "Toto"
     types:
       - "completed"
