@@ -9,6 +9,7 @@ jobs:
       - name: afficher le contenu de mon job
         run: ls
   Build:
+    needs: [MonPremierJob]
     runs-on: ubuntu-latest
     steps:
       - name: build de l'app
