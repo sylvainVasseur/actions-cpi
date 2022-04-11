@@ -1,7 +1,7 @@
 name: Toto
 on: [push]
 jobs:
-  MonPremierJob:
+  Test:
     runs-on: ubuntu-latest
     steps: 
       - name: Recup du repo
@@ -9,8 +9,17 @@ jobs:
       - name: test 1
         run: exit 1
       - name: test 2
-        if: ${{ always() }}
         run: echo "test 2"
-      - name: Envoi mail
-        if: ${{ failure() }}
-        run: echo "Envoi d'un mail si le test échoue"
+  Build:
+    needs: [Test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo "Je build"
+  Check:
+    needs: [Test, Build]
+    runs-on: ubuntu-latest
+    if: always() && (needs.Test.result == 'failure' || needs.Build.result == 'failure')
+    steps:
+      - name: "Mail"
+        run: echo "mail"
