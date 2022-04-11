@@ -1,5 +1,8 @@
 name: Toto
-on: [push]
+on:
+  push:
+    branches:
+      - "dev"
 jobs:
   Test:
     runs-on: ubuntu-latest
