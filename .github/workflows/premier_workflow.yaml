@@ -11,15 +11,13 @@ jobs:
   #   runs-on: ubuntu-latest
   #   if: always() && (needs.Test.result == 'failure')
   #   steps:
-      - name: create issue
-        uses: actions-ecosystem/action-create-issue@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          title: Problème lors du Test
-          body: |
-            ## A faire
-            Tout a pété!!!!
+      # - name: create issue
+      #   uses: actions-ecosystem/action-create-issue@v1
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     title: Problème lors du Test
+      #     body: |
+      #       ## A faire
+      #       Tout a pété!!!!
       - name: afficher secrets
-        run : echo ${{ secrets.TOTO }}
-      - name: afficher committer
-        run: ${{ github.committer }}
+        run : echo ${{ secrets.MY_SECRET }}
