@@ -1,8 +1,11 @@
 name: Toto
-on: [push]
+on:
+  push:
+    branches:
+      - "dev"
 jobs:
   Test:
     runs-on: ubuntu-latest
     steps: 
-      - name: Test 1 
-        run: echo "plop"
+      - name: Test 1
+        run: echo "Salut"
