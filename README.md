@@ -1,3 +1,3 @@
 # actions-cpi
 
-Hey salut ça va toi?Blablabla
+Hey salut ça va toi? Yep!
