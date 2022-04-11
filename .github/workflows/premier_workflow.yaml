@@ -16,6 +16,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           title: Problème lors du Test
+          assignees: ${{github.event.commits[0].committer}}
           body: |
             ## A faire
             Tout a pété!!!!
