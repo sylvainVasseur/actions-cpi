@@ -6,7 +6,10 @@ jobs:
     steps: 
       - name: Recup du repo
         uses: actions/checkout@v3
-        with:
-          ref: "refs/95eccff6866"
       - name: afficher le contenu de mon job
         run: ls
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build de l'app
+        run: echo "Je build"
