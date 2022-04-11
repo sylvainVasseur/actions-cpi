@@ -19,5 +19,4 @@ jobs:
           body: |
             ## A faire
             Tout a pété!!!!
-      - name: afficher committer
-        run: ${{ toJSON(github.event) }}
+          assignee: "ThomasT-semifir"
