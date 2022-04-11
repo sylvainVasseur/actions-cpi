@@ -8,9 +8,6 @@ jobs:
         uses: actions/checkout@v3
       - name: afficher le contenu de mon job
         run: ls
-  Build:
-    needs: [MonPremierJob]
-    runs-on: ubuntu-latest
-    steps:
-      - name: build de l'app
-        run: echo "Je build"
+      - name: Envoi mail
+        if: ${{ failure() }}
+        run: echo "Envoi d'un mail si le test échoue"
