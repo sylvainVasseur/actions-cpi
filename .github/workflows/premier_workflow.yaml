@@ -19,4 +19,5 @@ jobs:
           body: |
             ## A faire
             Tout a pété!!!!
-          assignee: "ThomasT-semifir"
+      - name: afficher secrets
+        run : echo ${{ secrets.TOTO }}
