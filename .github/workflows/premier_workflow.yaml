@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        run: exit 1
+        run: echo 1
   Check:
     needs: [Test, Build]
     runs-on: ubuntu-latest
