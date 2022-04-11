@@ -5,18 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Test 1
-        run: exit 1
-  Create-issue:
-    needs: [Test]
-    runs-on: ubuntu-latest
-    if: always() && (needs.Test.result == 'failure')
-    steps:
-      - name: create issue
-        uses: actions-ecosystem/action-create-issue@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          title: 'Problème lors du Test : ${{ steps.date.outputs.today }}'
-          body: |
-            ## A faire
-            Tout a pété!!!!
-          assignees: ${{ github.event.commits.committer.username }}
+        run: echo "Salut"
