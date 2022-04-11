@@ -7,6 +7,6 @@ jobs:
       - name: Recup du repo
         uses: actions/checkout@v3
         with:
-          ref: "refs/SHA/95eccff6866"
+          ref: "refs/95eccff6866"
       - name: afficher le contenu de mon job
         run: ls
