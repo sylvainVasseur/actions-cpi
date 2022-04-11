@@ -6,7 +6,5 @@ jobs:
     steps: 
       - name: Recup du repo
         uses: actions/checkout@v3
-        with:
-          ref: "refs/tags/1.0.0"
       - name: afficher le contenu de mon job
         run: ls
