@@ -4,5 +4,7 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     steps: 
-      - uses: ThomasT-semifir/actions-hello-cpi@1.3.0
+      - uses: ThomasT-semifir/actions-hello-cpi@2.0.0
+        with:
+          name: Thomas
 
