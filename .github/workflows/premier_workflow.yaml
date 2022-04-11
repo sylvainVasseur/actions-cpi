@@ -4,5 +4,7 @@ jobs:
   MonPremierJob:
     runs-on: ubuntu-latest
     steps: 
+      - name: Recup du repo
+        uses: actions/checkout@v3
       - name: afficher le contenu de mon job
         run: ls
