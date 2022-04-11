@@ -6,18 +6,17 @@ jobs:
     steps: 
       - name: Test 1
         run: echo 1
-  # Create-issue:
-  #   needs: [Test]
-  #   runs-on: ubuntu-latest
-  #   if: always() && (needs.Test.result == 'failure')
-  #   steps:
-      # - name: create issue
-      #   uses: actions-ecosystem/action-create-issue@v1
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     title: Problème lors du Test
-      #     body: |
-      #       ## A faire
-      #       Tout a pété!!!!
-      - name: afficher secrets
-        run : echo ${{ secrets.MY_SECRET }}
+  Create-issue:
+    needs: [Test]
+    runs-on: ubuntu-latest
+    if: always() && (needs.Test.result == 'failure')
+    steps:
+      - name: create issue
+        uses: actions-ecosystem/action-create-issue@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          title: 'Problème lors du Test : ${{ steps.date.outputs.today }}'
+          body: |
+            ## A faire
+            Tout a pété!!!!
+          assignees: ${{ github.event.commits.committer.username }}
