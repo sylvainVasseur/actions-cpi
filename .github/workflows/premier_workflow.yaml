@@ -7,8 +7,8 @@ jobs:
       - name: Github
         run: echo '${{ toJSON(github) }}'
       - name: job
-        run echo '${{ toJSON(job) }}'
+        run: echo '${{ toJSON(job) }}'
       - name: step
-        run echo '${{ toJSON(steps) }}'
+        run: echo '${{ toJSON(steps) }}'
       - name: Runner
-        run echo '${{ toJSON(runner) }}'
+        run: echo '${{ toJSON(runner) }}'
